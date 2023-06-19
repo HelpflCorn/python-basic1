@@ -1,0 +1,15 @@
+import random
+x = input("Please insert your word and see how messed up it will get:")
+l = list(x)
+random.shuffle(l)
+q = "".join(l)
+random.shuffle(l)
+w = "".join(l)
+random.shuffle(l)
+e = "".join(l)
+random.shuffle(l)
+r = "".join(l)
+random.shuffle(l)
+t = "".join(l)
+
+print(q, w, e, r, t)
