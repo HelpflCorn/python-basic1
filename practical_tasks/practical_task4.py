@@ -92,16 +92,46 @@ print(list2[2][0] + list2[2][1] + list2[2][2])
 їх оцінками.
 """
 #
-marks = {'Taras Shevchenko':[5, 8, 10, 12, 8], 'Valerian Pidmohylnyi':[7, 4, 8, 10]}
+from statistics import mean
+
+name1marks = [5, 8, 10, 12, 8]
+name2marks = [7, 4, 8, 10]
+marks = {'Taras Shevchenko':name1marks, 'Valerian Pidmohylnyi':name2marks}
 print(marks)
-a = input("If you want to add another mark to one of the students press \"y\"")
+a = input("If you want to add another mark to one of the existing students press \"y\", press \"n\" if you want to add a new student and \"a\' to see the average scores")
+
 if a =="y":
+    b = input("Select the existing student whose mark you'd like to update")
+    c = input("Select the mark that you would like to add: ")
+    if b == "Taras Shevchenko":
+        name1marks.append(c)
+    if b == "Valerian Pidmohylnyi":
+        name2marks.append(c)
+    print(marks)
+if a =="n":
+    i = input("Would you like to add a new student to the list? y/n")
+    if i == "y":
+        o = input("Please insert a student name: ")
+        p = input("Please insert the mark or marks that you'd like to give: ")
+        name3marks=[]
+        name3marks.append(int(p))
+        marks.update({o:[int(p)]})
+        print(marks)
+if a=="a":
+    q = input("Please insert the student name for whom you'd like to see the average scores: ")
+    if q == "Taras Shevchenko":
+        print(mean(marks["Taras Shevchenko"]))
+    if q == 'Valerian Pidmohylnyi':
+        print(mean(marks["Valerian Pidmohylnyi"]))
+    elif q != "Valerian Pidmohylnyi" and q != "Taras Shevchenko":
+        print("There is no such student")
+    #cannot add an average for a new student if he hasn't been defined, don't know what to do
+elif a !="y" and a !="n"and a != "a":
+     print(f"You shoud insert the a, y or n, the current list of marks is {marks}")
     
     
-    
-    
-    
-    """ 7.
+
+""" 7.
 Створіть програму для управління замовленнями в ресторані.
 Використовуйте список (list) для зберігання замовлень, де кожне замовлення представлене як кортеж (tuple) з 
 назвою страви і ціною. Реалізуйте можливість додавання нових замовлень, 
