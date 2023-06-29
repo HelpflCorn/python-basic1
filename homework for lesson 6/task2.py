@@ -21,7 +21,7 @@ print(f'here\'s the second list of random numbers{randomlist1}')
 
 index = 0 #it didn't work with index 0
 
-while index < len(randomlist):  ##I don't know why it doesn't work
+while index < len(randomlist):  
     if randomlist[index] in randomlist1:
         matching_numbers.update([randomlist[index]])
     index+=1
