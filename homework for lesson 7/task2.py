@@ -14,11 +14,11 @@ prices = {
     "orange": 1.5,
     "pear": 3
 }
-total = {}
+total = {key:sum(i) for key, i in stock.values() prices.values()}
 
-for key in stock:
+""" for key in stock:
     if key in stock and key in prices:
-        total.update({key:stock[key]*prices[key]})
+        total.update({key:stock[key]*prices[key]}) """
 print(f'this is the calculated total {total}')
     
         
