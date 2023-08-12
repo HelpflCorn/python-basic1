@@ -6,11 +6,12 @@ and the number of occurrences as values.  """
 a = input("Write something here: ")
 b = a.lower().replace(",","")
 y = b.split()
-z = {}
+z = {word:y.count(word) for word in y} #.count to return the number of times the word is used
 
-for i in y:
+""" for i in y:
     if i in z:
         z[i]+=1
     else:
-        z[i]=1
+        z[i]=1 """
+
 print(z)
