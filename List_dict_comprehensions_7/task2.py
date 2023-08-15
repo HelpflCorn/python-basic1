@@ -14,7 +14,8 @@ prices = {
     "orange": 1.5,
     "pear": 3
 }
-total = {key:sum(i) for key, i in stock.values() prices.values()}
+
+total = {key: stock[key] * prices[key] for key in stock if key in prices}
 
 """ for key in stock:
     if key in stock and key in prices:
