@@ -1,0 +1,9 @@
+Array 1 (1000 elements):
+Bubble Sort: 0.06409931182861328 seconds
+Quick Sort: 0.0013594627380371094 seconds
+Insertion Sort: 0.03240370750427246 seconds
+
+Array 2 (10000 elements):
+Bubble Sort: 6.298650026321411 seconds
+Quick Sort: 0.02071380615234375 seconds
+Insertion Sort: 2.891265630722046 seconds
